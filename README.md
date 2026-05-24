@@ -1,4 +1,4 @@
-# Tanulók - Backend
+# Tanulók - Backend (index2.js jobb)
 ```
  0. Indítsuk el az XAMPP programot és importáljuk a tanulok.sql fájlt!
     Ez létrehozza a tanulok adatbázist, két táblával:
