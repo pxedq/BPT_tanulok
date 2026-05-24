@@ -98,7 +98,7 @@ app.get("/osztalyok", getOsztalyok);
 app.get("/tanulok/:oaz", getTanulokByOaz);
 app.post("/tanulok", postTanulo);
 app.put("/tanulo/:taz", putTanuloByTaz);
-app.deletet("/tanulo/:taz", deleteTanuloByTaz);
+app.delete("/tanulo/:taz", deleteTanuloByTaz);
 
 app.listen(88, err => {
     console.log(err ? err : "Server is listening on port #88");
