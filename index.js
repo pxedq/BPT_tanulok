@@ -18,11 +18,7 @@ async function getOsztalyok(req, res) {
     try {
         let sql = "SELECT * FROM osztalyok ORDER BY osztaly";
         let [ adat ] = await con.execute(sql, []);
-        if(adat.length == 0) {
-            res.status(404).send({error:"Nincs ilyen azonosítójú osztály!"});
-        } else {
-            res.send(adat);
-        }
+        res.send(adat);
     } catch (error) {
         res.status(500).send({msg:"Adatbázis hiba!"});
     }
@@ -33,7 +29,11 @@ async function getTanulok(req, res) {
     try {
         let sql = "SELECT * FROM tanulok WHERE oaz=? ORDER BY nev";
         let [ adat ] = await con.execute(sql, [oaz]);
-        res.send(adat);
+        if(adat.length == 0) {
+            res.status(404).send({error:"Nincs ilyen azonosítójú osztály!"});
+        } else {
+            res.send(adat);
+        }
     } catch (error) {
         res.status(500).send({msg:"Adatbázis hiba!"});
     }
