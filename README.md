@@ -1,4 +1,4 @@
-# Tanulok
+# Tanulok - Backend
 ```
  0. Indítsuk el az XAMPP programot és importáljuk a tanulok.sql fájlt!
     Ez létrehozza a tanulok adatbázist, két táblával:
